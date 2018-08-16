@@ -4,7 +4,6 @@
  *  @brief   Implementation of a circular buffer
  */
 
-#include "error.h"
 #include <stdbool.h>
 #include <stdint.h>
 
