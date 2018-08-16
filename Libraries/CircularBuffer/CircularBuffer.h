@@ -7,7 +7,6 @@
 #ifndef CIRCULAR_BUFFER_H_
 #define CIRCULAR_BUFFER_H_
 
-#include "error.h"
 #include <stdint.h>
 
 typedef struct CircularBuffer CircularBuffer_t;
@@ -22,9 +21,9 @@ CircularBuffer_t CircularBuffer_init(uint8_t* buffer, uint8_t size);
 
 void CircularBuffer_reset(CircularBuffer_t* circularBuffer);
 
-Error_t CircularBuffer_put(CircularBuffer_t* circularBuffer, uint8_t data, E_ACTION_WHEN_FULL ActionWhenFull);
+int8_t CircularBuffer_put(CircularBuffer_t* circularBuffer, uint8_t data, E_ACTION_WHEN_FULL ActionWhenFull);
 
-Error_t CircularBuffer_get(CircularBuffer_t* circularBuffer, uint8_t* data);
+int8_t CircularBuffer_get(CircularBuffer_t* circularBuffer, uint8_t* data);
 
 bool CircularBuffer_isEmpty(CircularBuffer_t* circularBuffer);
 
