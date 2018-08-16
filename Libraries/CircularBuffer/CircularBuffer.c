@@ -62,7 +62,7 @@ void CircularBuffer_reset(CircularBuffer_t* circularBuffer)
 
 int8_t CircularBuffer_put(CircularBuffer_t* circularBuffer, uint8_t data, E_ACTION_WHEN_FULL ActionWhenFull)
 {
-    int8_t ErrorCode = ERROR_OK;
+    int8_t ErrorCode = -1;
 
     if (ActionWhenFull == OVERWRITE_WHEN_FULL || !CircularBuffer_isFull(circularBuffer))
     {
@@ -76,7 +76,7 @@ int8_t CircularBuffer_put(CircularBuffer_t* circularBuffer, uint8_t data, E_ACTI
 
 int8_t CircularBuffer_get(CircularBuffer_t* circularBuffer, uint8_t* data)
 {
-    int8_t ErrorCode = ERROR_OK;
+    int8_t ErrorCode = -1;
 
     if (!CircularBuffer_isEmpty(circularBuffer))
     {
