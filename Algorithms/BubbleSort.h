@@ -3,6 +3,6 @@
 
 #include <stdbool.h>
 
-void bubbleSort(int* array, int size, bool inverted)
+void bubbleSort(int* array, int size, bool inverted);
 
 #endif /* BUBBLE_SORT_H_*/
